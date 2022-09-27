@@ -2,6 +2,8 @@
 
 # sagemaker-migration-toolkit
 
+> :warning: This is not inteded for production workloads. Please use this for testing and/or experimental workloads.
+
 This library provides a set of helper functions to deploy your pretrained models to SageMaker Real Time Endpoints. This library currently supports SKLearn, PyTorch, and Tensorflow models. 
 
 Deploying your pre-trained models on SageMaker allows you to benefit from scalable cloud based model inference. Currently you can deploy models on Amazon SageMaker via the AWS SDKs or SageMaker Python SDK. This process can be a little tedious for new users of AWS or SageMaker. SageMaker Migration Toolkit serves as a wrapper around these SDKs and helps Data Scientists focus on purely model deployment.
