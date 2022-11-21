@@ -7,7 +7,7 @@ with open(os.path.join(here, "sagemaker_migration", "__version__.py")) as f:
     exec(f.read(), about)
 
 
-with open("readme.md", "r") as f:
+with open("README.md", "r") as f:
     readme = f.read()
 
 required_packages = ["sagemaker>=2.92.1", "boto3>=1.24.0"]
