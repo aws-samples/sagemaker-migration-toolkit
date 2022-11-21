@@ -177,9 +177,9 @@ class SageMakerMigration():
             EndpointName        = endpoint_name,
             EndpointConfigName  = endpoint_config_name,
         )
-        return create_endpoint_response["EndpointArn"]
+        return endpoint_name, create_endpoint_response["EndpointArn"]
 
-    ######Monitoring function
+    # Monitoring endpoint creation
     def monitor_endpoint(self, endpoint_name):
         describe_endpoint_response = self._sm_client_.describe_endpoint(EndpointName=endpoint_name)
         while describe_endpoint_response["EndpointStatus"] == "Creating":
@@ -210,8 +210,13 @@ class SageMakerMigration():
 
         # Create endpoint
         print("Creating endpoint in SageMaker...")
-        endpoint = self.create_endpoint(endpoint_config_name)
-        print(f"Created endpoint: {endpoint}")
+        endpoint_name, endpoint_arn = self.create_endpoint(endpoint_config_name) 
+        print(f"Endpoint creation in process: {endpoint_name}")
+        
+        print("Monitoring endpoint creation...")
+        endpoint_status = self.monitor_endpoint(endpoint_name)
+        print(endpoint_status)
+        
 
     @property
     def Framework(self):
