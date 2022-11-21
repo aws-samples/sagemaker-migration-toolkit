@@ -18,7 +18,7 @@ def retrieve_pt():
     
 def retrieve_sklearn():
     sklearn_versions = []
-    sklearn_images = sagemaker.image_uris.config_for_framework(framework="sklearn")['versions']
+    sklearn_images = sagemaker.image_uris.config_for_framework(framework="sklearn")['inference']['versions']
     for version,metadata in sklearn_images.items():
         sklearn_versions.append(version)
     return sklearn_versions
