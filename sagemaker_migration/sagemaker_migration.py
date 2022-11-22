@@ -215,7 +215,7 @@ class SageMakerMigration():
         
         print("Monitoring endpoint creation...")
         endpoint_status = self.monitor_endpoint(endpoint_name)
-        print(endpoint_status)
+        return endpoint_status
         
 
     @property
