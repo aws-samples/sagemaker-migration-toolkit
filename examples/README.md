@@ -4,4 +4,4 @@ Building a set of examples of popular pre-trained models for use with SageMaker 
 
 ## Models
 
-[Resnet50 TensorFlow](https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50) -> [Blog/Guide](https://towardsdatascience.com/automating-deployment-of-pre-trained-models-on-amazon-sagemaker-46d50c246503)
+- [Resnet50 TensorFlow](https://www.tensorflow.org/api_docs/python/tf/keras/applications/resnet50/ResNet50) -> [Blog/Guide](https://towardsdatascience.com/automating-deployment-of-pre-trained-models-on-amazon-sagemaker-46d50c246503)
